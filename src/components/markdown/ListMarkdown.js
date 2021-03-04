@@ -21,10 +21,10 @@ const ListMarkdown = () => {
       });
       arr.push(<ol>{orderList}</ol>);
     }
-    if (e.target.value.match(/\* [^\n]+/gi)) {
-      e.target.value.match(/\* [^\n]+/gi).map((item, index) => {
+    if (e.target.value.match(/\*\. [^\n]+/gi)) {
+      e.target.value.match(/\*\. [^\n]+/gi).map((item, index) => {
         unorderList.push(
-          <li key={index}>{item.substring(item.indexOf(/\* /) + 3)}</li>
+          <li key={index}>{item.substring(item.indexOf(/\*\. /) + 4)}</li>
         );
       });
       arr.push(<ul>{unorderList}</ul>);

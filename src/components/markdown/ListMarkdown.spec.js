@@ -20,7 +20,7 @@ describe('<ListMarkdown />', () => {
     const wrapper = shallow(<ListMarkdown />);
     wrapper.find('textarea').simulate('keyup', {
       target: {
-        value: '* Ankit\n* Seth',
+        value: '*. Ankit\n*. Seth',
       },
     });
 
@@ -33,7 +33,7 @@ describe('<ListMarkdown />', () => {
     const wrapper = shallow(<ListMarkdown />);
     wrapper.find('textarea').simulate('keyup', {
       target: {
-        value: '1. Ankit*Seth\n* Seth',
+        value: '1. Ankit*Seth\n*. Seth',
       },
     });
 
